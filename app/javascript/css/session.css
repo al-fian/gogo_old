@@ -2,7 +2,8 @@
     @apply bg-gray-100 font-sans h-screen w-screen;
 }
 
-.body-session {
+.body-session
+h1.title {
     @apply font-thin text-center text-4xl;
 }
 
