@@ -22,4 +22,7 @@
 class Post < ApplicationRecord
   belongs_to :postable, polymorphic: true
   belongs_to :user
+
+  # optional: true is added because not every post has a reply
+  belongs_to :thread, class_name: "Post", optional: true
 end
