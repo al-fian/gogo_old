@@ -30,4 +30,6 @@ class Place < ApplicationRecord
   validates :name, presence: true
 
   validates :place_type, inclusion: { in: PLACE_TYPES }
+
+  belongs_to :post
 end
