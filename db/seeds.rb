@@ -19,3 +19,33 @@ user2 = User.create!(
   email: "cnice@example.com",
   username: "cnice007"
 )
+
+Bond.create(user: user1, friend: user2, state: Bond::FOLLOWING)
+Bond.create(user: user2, friend: user1, state: Bond::FOLLOWING)
+
+place = Place.create!(
+  locale: "en",
+  name: "Hotel Bangkok",
+  place_type: "hotel",
+  coordinate: "POINT (112.739898 -7.259836 0)"
+)
+
+post = Post.create!(user: user1, postable: Status.new(
+  text: "Wohoo! We're back in Bangkok. Where is everybody?"
+))
+
+Post.create!(user: user2, postable: Status.new(
+  text: "Arghhh! any party that I can join in."
+), thread: post)
+
+Post.create!(user: user1, postable: Status.new(
+  text: "That's great! We can all have some fun here."
+), thread: post)
+
+Post.create!(user: user2, postable: Status.new(
+  text: "Of course, dudes. Let's get a party kick off."
+), thread: post)
+
+Post.create(user: user1, postable: Sight.new(
+  place: place, activity_type: Sight::CHECKIN
+))
