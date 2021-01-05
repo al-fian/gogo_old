@@ -25,4 +25,6 @@ class Post < ApplicationRecord
 
   # optional: true is added because not every post has a reply
   belongs_to :thread, class_name: "Post", optional: true
+
+  has_many :pictures
 end
