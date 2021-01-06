@@ -18,10 +18,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def layout_by_resource
-    devise_controller? ? "session" : "application"
-  end
-
   protected
 
   def config_devise_params

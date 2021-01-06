@@ -4,6 +4,11 @@
     @apply rounded overflow-hidden;
 }
 .body-member
+.timeline .line {
+    @apply p-3;
+    @apply bg-dark-700;
+}
+.body-member
 .timeline .line .profile-container {
     @apply w-14;
 }
