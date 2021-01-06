@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   authenticate :user do
     resources :timelines,
-             only: [:index, :show]
+             only: [:index, :show],
+             param: :username
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

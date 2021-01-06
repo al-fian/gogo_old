@@ -64,6 +64,10 @@ class User < ApplicationRecord
 
   before_save :ensure_proper_name_case
 
+  def to_param
+    username
+  end
+
   def login
     @login || username || email
   end
@@ -99,6 +103,21 @@ class User < ApplicationRecord
     end
 
     recoverable
+  end
+
+  def name
+    if last_name
+      "#{first_name} #{last_name}"
+    else
+      first_name
+    end
+  end
+
+  def profile_picture_url
+    @profile_picture_url ||= begin
+    hash = Digest::MD5.hexdigest(email)
+    "https://www.gravatar.com/avatar/#{hash}?d=wavatar"
+    end
   end
 
   private
