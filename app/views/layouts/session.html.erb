@@ -1,17 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <title><%= yield :page_title %></title>
-  <%= csrf_meta_tag %>
-  <%= csp_meta_tag %>
+<%= render "layouts/header" %>
 
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_pack_tag 'application' %>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
 <body class="body-session">
   <h1 class="title hidden md:block absolute mb-6 mt-2 ml-2">
     <%= content_for(:page_title) %>
