@@ -6,18 +6,21 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+=begin
 user1 = User.create!(
   first_name: "Mike",
   last_name: "Tyson",
   email: "mtyson@example.com",
-  username: "mtyson34"
+  username: "mtyson34",
+  password: "fyannet3000"
 )
 
 user2 = User.create!(
   first_name: "Chuck",
   last_name: "Nice",
   email: "cnice@example.com",
-  username: "cnice007"
+  username: "cnice007",
+  password: "fyannet8000"
 )
 
 Bond.create(user: user1, friend: user2, state: Bond::FOLLOWING)
@@ -49,3 +52,4 @@ Post.create!(user: user2, postable: Status.new(
 Post.create(user: user1, postable: Sight.new(
   place: place, activity_type: Sight::CHECKIN
 ))
+=end

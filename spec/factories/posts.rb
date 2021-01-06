@@ -19,10 +19,26 @@
 #  fk_rails_...  (thread_id => posts.id)
 #  fk_rails_...  (user_id => users.id)
 #
+=begin
 FactoryBot.define do
   factory :post do
-    user_id { "" }
-    thread_id { "" }
+    user_id { 1 }
+    thread_id { 1 }
     postable { nil }
+  end
+end
+=end
+
+FactoryBot.define do
+  factory :post do
+    user { create(:user) }
+    postable { create(:status) }
+
+    trait :with_replies do
+      replies { [
+        create(:post),
+        create(:post)
+      ] }
+    end
   end
 end
