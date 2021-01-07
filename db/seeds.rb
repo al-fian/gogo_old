@@ -51,35 +51,3 @@ Post.create(user: user_1, postable: Sight.new(
 
 Bond.create(user: user_1, friend: user_2, state: Bond::FOLLOWING)
 Bond.create(user: user_2, friend: user_1, state: Bond::FOLLOWING)
-
-=begin
-Bond.create(user: user_1, friend: user_2, state: Bond::FOLLOWING)
-Bond.create(user: user_2, friend: user_1, state: Bond::FOLLOWING)
-
-place = Place.create!(
-  locale: "en",
-  name: "Hotel Bangkok",
-  place_type: "hotel",
-  coordinate: "POINT (112.739898 -7.259836 0)"
-)
-
-post = Post.create!(user: user1, postable: Status.new(
-  text: "Wohoo! We're back in Bangkok. Where is everybody?"
-))
-
-Post.create!(user: user2, postable: Status.new(
-  text: "Arghhh! any party that I can join in."
-), thread: post)
-
-Post.create!(user: user1, postable: Status.new(
-  text: "That's great! We can all have some fun here."
-), thread: post)
-
-Post.create!(user: user2, postable: Status.new(
-  text: "Of course, dudes. Let's get a party kick off."
-), thread: post)
-
-Post.create(user: user1, postable: Sight.new(
-  place: place, activity_type: Sight::CHECKIN
-))
-=end
