@@ -38,6 +38,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
   gem 'factory_bot_rails', '~> 6.1'
   gem 'simplecov', require: false
+  # em 'faker'
+  # gem 'shoulda-matchers'
+  # gem 'database_cleaner'
 end
 
 group :development do

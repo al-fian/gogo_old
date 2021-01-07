@@ -51,6 +51,7 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.7, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="css_parser (v1.7.1, asdf: 2.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.8.5, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.7.3, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.4.4, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="docile (v1.3.4, asdf: 2.7.2) [gem]" level="application" />
@@ -58,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="evil_icons (v1.10.1, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_bot (v6.1.0, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_bot_rails (v6.1.0, asdf: 2.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faker (v2.15.1, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.14.2, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="htmlentities (v4.3.4, asdf: 2.7.2) [gem]" level="application" />
@@ -107,6 +109,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sassc (v2.4.0, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sassc-rails (v2.1.2, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="semantic_range (v2.3.1, asdf: 2.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v4.4.1, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.21.0, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov-html (v0.12.3, asdf: 2.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov_json_formatter (v0.1.2, asdf: 2.7.2) [gem]" level="application" />

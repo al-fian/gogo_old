@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-=begin
 user1 = User.create!(
   first_name: "Mike",
   last_name: "Tyson",
@@ -23,6 +22,7 @@ user2 = User.create!(
   password: "fyannet8000"
 )
 
+=begin
 Bond.create(user: user1, friend: user2, state: Bond::FOLLOWING)
 Bond.create(user: user2, friend: user1, state: Bond::FOLLOWING)
 
