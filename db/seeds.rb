@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create!(
+user_1 = User.create!(
   first_name: "Mike",
   last_name: "Tyson",
   email: "mtyson@example.com",
@@ -14,7 +14,7 @@ user1 = User.create!(
   password: "fyannet3000"
 )
 
-user2 = User.create!(
+user_2 = User.create!(
   first_name: "Chuck",
   last_name: "Nice",
   email: "cnice@example.com",
@@ -22,9 +22,39 @@ user2 = User.create!(
   password: "fyannet8000"
 )
 
+post = Post.create!(user: user_1, postable: Status.new(
+  text: "Wohoo! We're back in Bangkok. Where is everybody?"
+))
+
+Post.create!(user: user_2, postable: Status.new(
+  text: "Arghhh! any party that I can join in."
+), thread: post)
+
+Post.create!(user: user_1, postable: Status.new(
+  text: "That's great! We can all have some fun here."
+), thread: post)
+
+Post.create!(user: user_2, postable: Status.new(
+  text: "Of course, dudes. Let's get a party kick off."
+), thread: post)
+
+place_1 = Place.create!(
+  locale: "en",
+  name: "Hotel Bangkok",
+  place_type: "hotel",
+  coordinate: "POINT (112.739898 -7.259836 0)"
+)
+
+Post.create(user: user_1, postable: Sight.new(
+  place: place_1, activity_type: Sight::CHECKIN
+))
+
+Bond.create(user: user_1, friend: user_2, state: Bond::FOLLOWING)
+Bond.create(user: user_2, friend: user_1, state: Bond::FOLLOWING)
+
 =begin
-Bond.create(user: user1, friend: user2, state: Bond::FOLLOWING)
-Bond.create(user: user2, friend: user1, state: Bond::FOLLOWING)
+Bond.create(user: user_1, friend: user_2, state: Bond::FOLLOWING)
+Bond.create(user: user_2, friend: user_1, state: Bond::FOLLOWING)
 
 place = Place.create!(
   locale: "en",
