@@ -19,7 +19,8 @@ RSpec.describe "timelines/_line.html.erb" do
     let(:post) { create(:post, :with_replies) }
 
     it "can be rendered" do
-      binding.pry
+      #binding.pry
+      expect(subject.css(".replies .line").count).to eq post.replies.count
     end
   end
 end
