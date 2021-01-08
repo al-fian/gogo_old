@@ -31,6 +31,7 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'evil_icons', '~> 1.10', '>= 1.10.1'
 gem 'premailer-rails', '~> 1.11', '>= 1.11.1'
+gem 'active_decorator', '~> 1.3', '>= 1.3.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
