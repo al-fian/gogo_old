@@ -10,6 +10,16 @@ RSpec.describe "timelines/_line.html.erb" do
   subject { Nokogiri::HTML(rendered) }
 
   it "can be rendered" do
-    binding.pry
+    expect(subject.css(".line").count).to eq 1
+    expect(subject.css(".replies")).to be_empty
+    expect(subject.css(".line .identifier")).not_to be_empty
+  end
+
+  context "when there are replies" do
+    let(:post) { create(:post, :with_replies) }
+
+    it "can be rendered" do
+      binding.pry
+    end
   end
 end
