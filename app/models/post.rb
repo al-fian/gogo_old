@@ -29,8 +29,9 @@ class Post < ApplicationRecord
   has_many :pictures
 
   scope :not_reply, -> { where(thread_id: nil) }
-  scope :of, -> (username) {
-    joins(:user).where(users: {username: username})
+  scope :written_by, -> (username) {
+    poster = User.find_by_username(username)
+    where(user: poster)
   }
 
   ## for the forms
