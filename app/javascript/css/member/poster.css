@@ -16,7 +16,7 @@
 .poster .submit-btn {
     @apply rounded-full p-2 w-full float-right;
     @apply bg-blue-700 text-white shadow;
-    color: #828d9f;
+    color: #ffffff;
     color: pointer;
 }
 @screen md {
