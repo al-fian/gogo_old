@@ -35,7 +35,7 @@ gem 'active_decorator', '~> 1.3', '>= 1.3.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
   gem 'factory_bot_rails', '~> 6.1'
   gem 'simplecov', require: false
