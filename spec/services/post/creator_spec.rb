@@ -4,7 +4,7 @@ describe Post::Creator do
   let(:user) { create(:user) }
   let(:permitted_params) { {} }
 
-  subject { describe_class.new(user, permitted_params) }
+  subject { described_class.new(user, permitted_params) }
 
   describe "#call" do
     context "when creating a status" do
