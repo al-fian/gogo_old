@@ -1,4 +1,4 @@
-class Post::Create < ApplicationService
+class Post::Creator < ApplicationService
   attr_accessor :creator, :params, :post
   private :creator, :params, :post
 

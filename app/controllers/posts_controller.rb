@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def create
-    is_posted = Post::Creator.all(
+    is_posted = Post::Creator.call(
       current_user,
       permitted_params
     )
