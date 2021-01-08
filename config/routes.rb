@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/create'
   devise_for :users
   root to: 'home#index'
   get 'home/index'
@@ -13,5 +12,7 @@ Rails.application.routes.draw do
              only: [:index, :show],
              param: :username
   end
+
+  resources :posts, only: [:create, :show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
