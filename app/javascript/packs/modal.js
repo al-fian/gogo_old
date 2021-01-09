@@ -18,11 +18,11 @@ window.closeAllModal = () => {
     })
 }
 
-document.addEventListener("DOMContentLoaded"), () => {
+document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
         if (e.target) {
             var classes = e.target.classList;
-            const modalElm = e.target.closest("[data-modal-class]")
+            const modalElm = e.target.closest("[data-modal-class]");
 
             if (!modalElm) { return }
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded"), () => {
 
             if (classes.contains("js-modal-overlay")) {
                 e.preventDefault();
-                window.toggleModal(modalClass)
+                window.toggleModal(modalClass);
             } else if (e.target.parentElement) {
                 var parentClass = e.target.parentElement.classList;
                 if (parentClass.contains("js-modal-close")) {
@@ -53,4 +53,4 @@ document.addEventListener("DOMContentLoaded"), () => {
             window.closeAllModal();
         }
     })
-}
+})

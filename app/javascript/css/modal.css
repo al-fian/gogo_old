@@ -2,6 +2,11 @@ body.modal-active {
     @apply overflow-x-hidden;
     @apply overflow-y-visible !important;
 }
+.modal {
+    @apply fixed w-full h-full top-0 left-0;
+    @apply flex items-center justify-center;
+    @apply z-10;
+}
 .modal
 .modal-overlay {
     @apply w-full h-full;
@@ -13,7 +18,8 @@ body.modal-active {
     @apply bg-dark-700 rounded shadow-lg z-50;
     border: 1px solid #212121;
 }
-.modal.modal-container .close-top-left {
+.modal
+.modal-container .close-top-left {
     @apply absolute top-0 right-0;
     @apply flex flex-col items-center;
     @apply text-white text-sm;
@@ -29,6 +35,7 @@ body.modal-active {
     @apply flex justify-between items-center;
     @apply pb-3;
 }
-.modal.modal-container .title-bar .title {
+.modal
+.modal-container .title-bar .title {
     @apply text-2xl font-bold;
 }
