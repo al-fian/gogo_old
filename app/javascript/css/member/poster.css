@@ -70,3 +70,21 @@
     @apply invisible block;
     @apply w-0 h-0;
 }
+.body-member
+.poster .pictures {
+    @apply mt-2;
+}
+.body-member
+.poster .pictures .picture-cont {
+    @apply inline-block mr-2;
+}
+.body-member
+.poster .pictures .picture-cont.template {
+    @apply hidden;
+}
+.body-member
+.poster .pictures .picture-cont img {
+    @apply object-cover;
+    height: 80px;
+    width: 80px;
+}
