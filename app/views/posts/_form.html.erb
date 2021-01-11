@@ -12,6 +12,10 @@
       <div class="controls">
         <div class="options">
           <div class="option">
+            <input type="file" multiple
+              id="picture_files"
+              name="post[pictures][]"
+              accept="image/*">
             <%= evil_icon "ei-image" %>
           </div>
         </div>
@@ -25,9 +29,13 @@
 
 <script type="text/javascript">
   var clickHandler = (evt) => {
-      var formElm = evt.target.closest("form")
-      var textareaElm = formElm.querySelector("textarea")
-      textareaElm.focus()
+      var formElm = evt.target.closest("form");
+      var textareaElm = formElm.querySelector("textarea");
+
+      if (evt.target && evt.target.classList.contains("icon")) {
+          return;
+      }
+      textareaElm.focus();
   }
 
   document.querySelector("#<%= form_id %>").addEventListener(
