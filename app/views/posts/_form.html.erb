@@ -1,7 +1,7 @@
 <% form_id = "poster-#{SecureRandom.hex(3)}" %>
 <% thread = local_assigns[:thread] %>
 
-<div class="poster flex p-3 <%= "p-3" unless thread %>">
+<div class="poster flex <%= "p-3" unless thread %>">
   <%= form_for Post.new, html: { id: form_id } do |f| %>
     <%= f.hidden_field :postable_type, value: "Status" %>
     <%= f.hidden_field :thread_id, value: thread&.id %>
@@ -9,7 +9,17 @@
         required: true,
         placeholder: "What's happening?" %>
 
-    <%= f.submit "Say", class: "submit-btn" %>
+      <div class="controls">
+        <div class="options">
+          <div class="option">
+            <%= evil_icon "ei-image" %>
+          </div>
+        </div>
+
+        <div>
+          <%= f.submit "Say", class: "submit-btn" %>
+        </div>
+      </div>
   <% end %>
 </div>
 
