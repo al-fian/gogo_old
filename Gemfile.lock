@@ -127,7 +127,7 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     htmlentities (4.3.4)
-    i18n (1.8.6)
+    i18n (1.8.7)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
@@ -153,12 +153,11 @@ GEM
     method_source (1.0.0)
     mimemagic (0.3.5)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
-    minitest (5.14.2)
+    minitest (5.14.3)
     msgpack (1.3.3)
     nio4r (2.5.4)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.1-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
     premailer (1.14.2)
@@ -177,6 +176,7 @@ GEM
     public_suffix (4.0.6)
     puma (5.1.1)
       nio4r (~> 2.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-mini-profiler (2.3.0)
       rack (>= 1.2.0)
@@ -321,7 +321,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
-  webpacker (~> 5.0)
+  webpacker (~> 5.2, >= 5.2.1)
 
 RUBY VERSION
    ruby 2.7.2p137
