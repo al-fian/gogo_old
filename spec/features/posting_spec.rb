@@ -46,4 +46,22 @@ feature 'Posting' do
       expect(page).to have_selector("img", count: 1)
     end
   end
+
+  scenario "Posting a status with multiple pictures" do
+    sign_in user
+
+    expect {
+      fill_in "post_status_text", with: status_text
+      attach_file "picture_files", [
+        Rails.root.join("lgtm.png"),
+        Rails.root.join("lgtm2.gif")
+      ], visible: false
+      click_on "Say"
+    }.to change { user.reload.posts.count }.from(0).to(1)
+
+    within(".line .content") do
+      expect(page).to have_selector("img", count:2)
+    end
+    # binding.pry
+  end
 end
