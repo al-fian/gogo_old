@@ -45,6 +45,12 @@ group :development, :test do
   # gem 'database_cleaner'
 end
 
+group :test do
+  gem 'launchy', '~> 2.5'
+  gem 'capybara', '~> 3.34'
+  gem 'apparition', '~> 0.6.0'
+end
+
 group :development do
   gem 'annotate', '~> 3.1', '>= 3.1.1'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
