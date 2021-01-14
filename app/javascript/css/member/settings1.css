@@ -2,6 +2,7 @@
     @apply p-3;
     @apply bg-dark-700;
 }
+
 .settings
 .setting-form .field {
     @apply p-2 pt-0 rounded;
@@ -9,6 +10,7 @@
     @apply border-b border-solid border-dark-700;
     @apply mb-1;
 }
+
 .settings
 .setting-form label {
     @apply w-full inline-block;
