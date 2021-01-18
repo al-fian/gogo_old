@@ -17,10 +17,11 @@ Rails.application.routes.draw do
     resources :bonds, param: :username do
       member do
         post :follow
+        post :unfollow
       end
     end
   end
-  
+
   namespace :settings do
     resource :user, only: [:show, :update]
   end
