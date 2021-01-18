@@ -24,24 +24,27 @@
 
 FactoryBot.define do
   factory :user do
+
     username { SecureRandom.hex(3) }
     first_name { ["Andy", "Jenny", "Robert"].sample }
     last_name { ["Collins", "Blaire", "Weiss"].sample }
     email { "#{SecureRandom.hex(4)}@example.com" }
     password { SecureRandom.hex(6) }
     is_public { true }
+
+    trait :private do
+      is_public { false }
+    end
+
+    transient do
+      followers { [] }
+    end
+
+    after(:create) do |user, evaluator|
+      evaluator.followers.each do |follower|
+        create(:bond, :following, user: follower, friend: user)
+      end
+    end
   end
 end
 
-=begin
-FactoryBot.define do
-  factory :random_user, class: User do
-    first_name { Faker::Name.first_name }
-    last_name { Faker::Name.last_name }
-    username { Faker::Internet.unique.username }
-    email { Faker::Internet.unique.safe_email }
-    password { Faker::Internet.unique.password }
-    is_public { true }
-  end
-end
-=end
