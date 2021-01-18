@@ -34,6 +34,9 @@ gem 'premailer-rails', '~> 1.11', '>= 1.11.1'
 gem 'active_decorator', '~> 1.3', '>= 1.3.4'
 gem 'aws-sdk-s3', require: false
 
+# User authorization
+gem 'bali', '~> 6.0', '>= 6.0.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug', platforms: [:mri, :mingw, :x64_mingw]
