@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'home#index'
-  get 'home/index'
+  # get 'home/index'
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
