@@ -31,4 +31,13 @@ class BondsController < ApplicationController
 
     redirect_to timelines_path(visited_user)
   end
+
+
+  def followers
+    @bonded_users = visited_user.followers
+  end
+
+  def following
+    @bonded_users = visited_user.followings
+  end
 end
