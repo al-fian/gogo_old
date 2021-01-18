@@ -9,12 +9,18 @@ Rails.application.routes.draw do
 
   authenticate :user do
     resources :timelines,
-             only: [:index, :show],
-             param: :username
+       only: [:index, :show],
+       param: :username
+
+    resources :posts, only: [:create, :show]
+
+    resources :bonds, param: :username do
+      member do
+        post :follow
+      end
+    end
   end
-
-  resources :posts, only: [:create, :show]
-
+  
   namespace :settings do
     resource :user, only: [:show, :update]
   end
